@@ -2,41 +2,42 @@
   
 # Sistemas de Controle & Inteligência Artificial (SCIA)
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Bungee+Inline&size=24&duration=3000&pause=400&color=5AA40E&center=true&vCenter=true&width=435&lines=Trabalhando+os+algor%C3%ADtimos%3A;GREEDY+%7C+ESTRELA+%7C+FUZZY" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=26&duration=3000&pause=400&color=00D9FF&center=true&vCenter=true&width=600&lines=Algoritmos+Inteligentes;GREEDY+%7C+A*+(ESTRELA)+%7C+FUZZY;Otimiza%C3%A7%C3%A3o+%2B+Controle+Adaptativo" alt="Typing SVG" /></a>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"/>
   <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
-  <img src="https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib"/>
-
+  <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"/>
 </p>
 
+> *"A IA não substituirá os humanos, mas os humanos que souberem usá-la substituirão os que não sabem."*          
+> **— Kai-Fu Lee**
 
-
-> *"A IA não substituirá os humanos, mas os humanos que souberem usá-la substituirão os que não sabem.”*          
-> Kai-Fu Lee
-
----
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 
 </div>
 
-## 🎯 Sobre o repositório
+---
 
-Este repositório apresenta implementações práticas e estudos aprofundados dos principais algoritmos de controle inteligente e otimização abordados na disciplina.
-A estrutura de arquivos acompanha o progresso didático, refletindo a evolução prática na criação dos algoritmos. O ponto culminante é o projeto de conclusão de semestre (A3), uma aplicação de grande escala que consolida e integra todo o conhecimento adquirido.
+## 🎯 Sobre o Repositório
+
+Este repositório documenta implementações práticas e estudos aprofundados dos principais algoritmos de **controle inteligente** e **otimização** desenvolvidos na disciplina de Sistemas de Controle e Inteligência Artificial da **UNIFACS**.
+
+A estrutura reflete a progressão didática do curso, desde algoritmos fundamentais de busca e otimização até o **projeto A3** — um sistema completo de **Machine Learning** para predição e análise de dados.
 
 <details>
-<summary>🔍 <b>Clique para ver os objetivos do curso</b></summary>
+<summary><b>📋 Objetivos de Aprendizagem</b></summary>
 
 <br>
 
-- ✅ Compreender fundamentos de sistemas de controle
-- ✅ Implementar algoritmos de otimização (Greedy, Dynamic Programming)
-- ✅ Desenvolver sistemas de lógica fuzzy
-- ✅ Aplicar técnicas de Machine Learning
-- ✅ Integrar IA em sistemas embarcados e de controle
-- ✅ Resolver problemas reais com abordagens inteligentes
+**Competências Desenvolvidas:**
+- Formular e conceber técnicas de controle com uso de IA
+- Implementar sistemas utilizando algoritmos de busca e otimização
+- Analisar complexidade computacional de algoritmos
+- Desenvolver sistemas baseados em lógica fuzzy
+- Aplicar técnicas de aprendizado de máquina
+- Integrar IA em sistemas de controle
 
 </details>
 
@@ -45,271 +46,339 @@ A estrutura de arquivos acompanha o progresso didático, refletindo a evolução
 ## 🗂️ Estrutura do Repositório
 
 ```
-📦 scia/
-┣ 📂 algoritimos
- ┣ 📂01-greedy/
-    ┣ 📄 
-    ┗ 📄 
- ┣ 📂 02-estrela/
-    ┣ 📄 
-    ┗ 📄 
- ┣ 📂 03-fuzzy/
-    ┣ 📄 
-    ┗ 📄 
-┣ 📂 av3
-    ┣ 📄 
-    ┣ 📄 
-    ┗ 📄 
+📦 SCIA-UNIFACS/
+┣ 📂 algoritmos/
+┃  ┣ 📂 01-greedy/
+┃  ┃  ┣ 📄 problema_mochila.py
+┃  ┃  ┣ 📄 algoritmo_prim.py
+┃  ┃  ┗ 📄 README.md
+┃  ┣ 📂 02-estrela/
+┃  ┃  ┣ 📄 busca_a_estrela.py
+┃  ┃  ┣ 📄 heuristica_manhattan.py
+┃  ┃  ┗ 📄 README.md
+┃  ┗ 📂 03-fuzzy/
+┃     ┣ 📄 controle_ar_condicionado.py
+┃     ┣ 📄 sistema_fuzzy_temperatura.py
+┃     ┗ 📄 README.md
+┣ 📂 av3-projeto-ml/
+┃  ┣ 📂 datasets/
+┃  ┣ 📂 notebooks/
+┃  ┣ 📂 modelos/
+┃  ┣ 📄 relatorio_tecnico.pdf
+┃  ┗ 📄 README.md
 ┗ 📄 README.md
 ```
+
 ---
 
-## 🚀 Conteúdos Implementados
+## 🚀 Algoritmos Implementados
+
+<div align="center">
 
 <table>
 <tr>
-<td width="50%">
+<td width="33%" align="center">
 
-### 🎲 Algoritmo Greedy
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Cookie.png" width="30"/> GREEDY
+**Algoritmo Guloso**
 
-<img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" width="100%"/>
+<img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="200">
+
+Estratégia de escolha localmente ótima a cada passo, buscando convergência para solução global.
 
 **Implementações:**
-- 🔹 Problema da Mochila
-- 🔹 Algoritmo de Dijkstra
-- 🔹 Problema do Troco
-- 🔹 Scheduling de Tarefas
-- 🔹 Árvore Geradora Mínima (Kruskal)
+- Problema da Mochila
+- Árvore Geradora Mínima (Prim)
+- Escalonamento de Tarefas
+- Problema do Troco
 
-**Conceitos:**
-> Escolha gulosa a cada passo buscando otimização local que leva à solução global.
-
-```python
-# Exemplo: Problema do Troco
-def troco_guloso(valor, moedas):
-    resultado = []
-    for moeda in sorted(moedas, reverse=True):
-        while valor >= moeda:
-            resultado.append(moeda)
-            valor -= moeda
-    return resultado
-```
+[📂 Ver implementações](./algoritmos/01-greedy/)
 
 </td>
-<td width="50%">
+<td width="33%" align="center">
 
-### 🌫️ Lógica Fuzzy
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" width="30"/> A* (ESTRELA)
+**Busca Heurística**
 
-<img src="https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif" width="100%"/>
+<img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="200">
+
+Algoritmo de busca informada que utiliza heurísticas para encontrar o caminho ótimo eficientemente.
 
 **Implementações:**
-- 🔹 Sistema de Controle de Ar-Condicionado
-- 🔹 Controle de Velocidade de Veículo
-- 🔹 Sistema de Avaliação de Risco
-- 🔹 Controlador Fuzzy Genérico
+- Busca A* em grafos
+- Heurística de Manhattan
+- Heurística Euclidiana
+- Pathfinding em mapas
 
-**Conceitos:**
-> Lida com incertezas através de conjuntos fuzzy e regras linguísticas.
+[📂 Ver implementações](./algoritmos/02-estrela/)
 
-```python
-# Exemplo: Regra Fuzzy
-if temp == "alta":
-    velocidade = "rápida"
-elif temp == "média":
-    velocidade = "média"
-else:
-    velocidade = "lenta"
-```
+</td>
+<td width="33%" align="center">
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fog.png" width="30"/> FUZZY
+**Lógica Difusa**
+
+<img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="200">
+
+Sistema que lida com incertezas através de conjuntos fuzzy e regras linguísticas.
+
+**Implementações:**
+- Controle de Ar-Condicionado
+- Sistema de Controle de Temperatura
+- Controlador Fuzzy Genérico
+- Avaliação de Risco
+
+[📂 Ver implementações](./algoritmos/03-fuzzy/)
 
 </td>
 </tr>
 </table>
 
+</div>
+
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🎓 Projeto A3: Machine Learning
 
 <div align="center">
 
-| Linguagem | Bibliotecas | Ferramentas |
-|:---------:|:----------:|:-----------:|
+<img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="400">
+
+### **Predição e Análise de Dados**
+
+Projeto final da disciplina desenvolvendo um sistema completo de Machine Learning com análise de três datasets, aplicando técnicas de classificação, regressão e redes neurais.
+
+**📊 Técnicas:** EDA | Pré-processamento | Random Forest | SVM | Redes Neurais
+
+**📅 Entrega:** 06/11/2025 | **🎤 Apresentação:** 13/11/2025
+
+**[📖 Documentação Completa do Projeto A3 →](./av3-projeto-ml/README.md)**
+
+</div>
+
+---
+
+## 🛠️ Stack Tecnológica
+
+<div align="center">
+
+| Linguagem | Bibliotecas | Ambiente de Desenvolvimento |
+|:---------:|:-----------:|:---------------------------:|
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="50"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" width="50"/> |
-| Python 3.10+ | NumPy | Jupyter Notebook |
-| | Matplotlib | Google Colab |
-| | Pandas | VS Code |
-| | Scikit-Learn | Git & GitHub |
+| **Python 3.10+** | **NumPy** | **Jupyter Notebook** |
+| | **Matplotlib** | **Google Colab** |
+| | **Pandas** | **PyCharm** |
+| | **Scikit-Learn** | **Spyder** |
+| | **Seaborn** | **Orange** |
+
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 
 </div>
 
 ---
 
-## 📊 Visualizações e Resultados
-
-<div align="center">
-
-### 🎨 Exemplos de Outputs
-
-<table>
-<tr>
-<td align="center" width="33%">
-<b>Sistema Fuzzy</b><br>
-<img src="https://via.placeholder.com/300x200/667eea/ffffff?text=Gr%C3%A1ficos+Fuzzy" width="100%"/>
-<sub>Funções de pertinência</sub>
-</td>
-<td align="center" width="33%">
-<b>Algoritmo Greedy</b><br>
-<img src="https://via.placeholder.com/300x200/764ba2/ffffff?text=Otimiza%C3%A7%C3%A3o" width="100%"/>
-<sub>Convergência da solução</sub>
-</td>
-<td align="center" width="33%">
-<b>Machine Learning</b><br>
-<img src="https://via.placeholder.com/300x200/f093fb/ffffff?text=Previs%C3%B5es" width="100%"/>
-<sub>Acurácia do modelo</sub>
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-## 🎓 Conceitos Estudados
+## 📊 Fundamentos Teóricos
 
 <div align="center">
 
 ```mermaid
-graph LR
-    A[Sistemas de Controle e IA] --> B[Otimização]
-    A --> C[Controle Fuzzy]
-    A --> D[Machine Learning]
-    B --> E[Greedy]
-    B --> F[Dynamic Programming]
-    C --> G[Fuzzificação]
-    C --> H[Inferência]
-    C --> I[Defuzzificação]
-    D --> J[Supervisionado]
-    D --> K[Não-Supervisionado]
+mindmap
+  root((SCIA))
+    Otimização
+      Greedy
+        Escolha Gulosa
+        Complexidade O(n log n)
+      Busca Heurística
+        A* (Estrela)
+        Dijkstra
+    Controle Inteligente
+      Lógica Fuzzy
+        Fuzzificação
+        Inferência
+        Defuzzificação
+      Controladores
+        PID Fuzzy
+        Controle Adaptativo
+    Machine Learning
+      Supervisionado
+        Classificação
+        Regressão
+      Não-Supervisionado
+        Clustering
+        Redução Dimensional
+      Técnicas Avançadas
+        Random Forest
+        Redes Neurais
+        SVM
+    Grafos
+      Representação
+      Busca em Largura
+      Busca em Profundidade
 ```
 
 </div>
 
 <details>
-<summary>📖 <b>Expandir Teoria</b></summary>
+<summary><b>💡 Expandir Conceitos</b></summary>
 
 <br>
 
-### 1️⃣ Algoritmos Greedy
-Estratégia que faz a escolha localmente ótima em cada etapa, esperando encontrar um ótimo global.
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Cookie.png" width="20"/> Algoritmo Greedy (Guloso)
+
+Estratégia de otimização que faz a escolha localmente ótima em cada etapa.
 
 **Características:**
-- ✅ Simples de implementar
-- ✅ Eficientes computacionalmente
-- ⚠️ Nem sempre garantem solução ótima global
+- Simples de implementar
+- Eficiente computacionalmente
+- Nem sempre garante solução global ótima
+- Complexidade típica: O(n log n)
 
-### 2️⃣ Lógica Fuzzy
-Sistema baseado em "graus de verdade" ao invés de lógica booleana tradicional.
+**Aplicações:** Problema da mochila fracionária, árvores geradoras mínimas, escalonamento de tarefas.
 
-**Etapas:**
-1. **Fuzzificação**: Converter entrada crisp em graus de pertinência
-2. **Inferência**: Aplicar regras fuzzy (SE-ENTÃO)
-3. **Defuzzificação**: Converter saída fuzzy em valor crisp
+---
 
-### 3️⃣ Machine Learning
-Algoritmos que aprendem padrões a partir de dados.
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" width="20"/> Algoritmo A* (Estrela)
 
-**Tipos:**
-- **Supervisionado**: Com rótulos (classificação, regressão)
-- **Não-supervisionado**: Sem rótulos (clustering, redução dimensional)
-- **Por reforço**: Aprendizado por tentativa e erro
+Busca heurística que combina custo real com estimativa heurística.
+
+**Função de avaliação:** `f(n) = g(n) + h(n)`
+- `g(n)` = custo do caminho do início até n
+- `h(n)` = heurística (estimativa de n até o objetivo)
+
+**Propriedades:**
+- Completo (sempre encontra solução se existir)
+- Ótimo (encontra menor caminho)
+- Eficiência depende da heurística escolhida
+
+---
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fog.png" width="20"/> Lógica Fuzzy (Difusa)
+
+Sistema baseado em graus de pertinência ao invés de lógica booleana.
+
+**Pipeline:**
+1. **Fuzzificação:** Converte entrada crisp em graus de pertinência
+2. **Inferência:** Aplica regras linguísticas (SE-ENTÃO)
+3. **Defuzzificação:** Converte saída fuzzy em valor crisp
+
+**Vantagens:** Modelagem de incertezas, linguagem natural, controle robusto.
 
 </details>
 
 ---
 
-## 🚦 Como Executar
+## 🚦 Início Rápido
 
-### Pré-requisitos
+### **Pré-requisitos**
 
 ```bash
-# Instalar Python 3.10+
+# Verificar Python 3.10+
 python --version
 
-# Criar ambiente virtual (recomendado)
+# Criar ambiente virtual
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+
+# Ativar ambiente
+source venv/bin/activate      # Linux/Mac
+venv\Scripts\activate         # Windows
 ```
 
-### Instalação
+### **Instalação**
 
 ```bash
-# Clonar o repositório
-git clone https://github.com/SEU_USUARIO/sistemas-controle-ia.git
-cd sistemas-controle-ia
+# Clonar repositório
+git clone https://github.com/SEU_USUARIO/SCIA-UNIFACS.git
+cd SCIA-UNIFACS
 
 # Instalar dependências
 pip install -r requirements.txt
-
-# Executar um exemplo
-python 02-logica-fuzzy/controle_ar_condicionado.py
 ```
 
-### 📓 Notebooks
+### **Executar Exemplos**
 
 ```bash
-# Iniciar Jupyter
+# Algoritmo Greedy
+python algoritmos/01-greedy/problema_mochila.py
+
+# Busca A*
+python algoritmos/02-estrela/busca_a_estrela.py
+
+# Sistema Fuzzy
+python algoritmos/03-fuzzy/controle_ar_condicionado.py
+```
+
+### **Jupyter Notebooks**
+
+```bash
+# Local
 jupyter notebook
 
-# Ou usar Google Colab
-# Faça upload do arquivo .ipynb
+# Google Colab
+# Upload dos arquivos .ipynb
 ```
 
 ---
 
-## 📈 Roadmap
+## 📈 Progresso do Semestre
 
 <div align="center">
 
 ```mermaid
 gantt
-    title Cronograma da Disciplina
+    title Cronograma SCIA - 2025.2
     dateFormat  YYYY-MM-DD
-    section Módulo 1
-    Algoritmos Greedy           :done, 2025-03-01, 3w
-    section Módulo 2
-    Lógica Fuzzy               :active, 2025-03-22, 4w
-    section Módulo 3
-    Machine Learning           :2025-04-19, 4w
-    section Módulo 4
-    Projeto Final              :2025-05-17, 3w
+    section Fundamentos
+    Teoria de Grafos           :done, 2025-02-10, 2w
+    Algoritmos de Busca        :done, 2025-02-24, 2w
+    section Otimização
+    Algoritmos Greedy          :done, 2025-03-10, 3w
+    Busca A* (Estrela)         :done, 2025-03-31, 3w
+    section Controle
+    Lógica Fuzzy               :done, 2025-04-21, 4w
+    Controladores Fuzzy        :active, 2025-05-19, 3w
+    section Projeto Final
+    A3 - Machine Learning      :2025-06-09, 4w
 ```
 
 </div>
 
-- [x] ✅ Implementar algoritmos Greedy básicos
-- [x] ✅ Desenvolver sistema Fuzzy de controle
-- [ ] 🔄 Criar modelos de Machine Learning
-- [ ] 🔄 Integrar sistemas de controle com IA
-- [ ] 📅 Desenvolver projeto final integrado
-- [ ] 📅 Documentar todos os experimentos
+**Checkpoints:**
+- [x] Implementação de algoritmos Greedy
+- [x] Implementação de busca A*
+- [x] Sistema de lógica Fuzzy desenvolvido
+- [ ] Análise exploratória dos datasets (A3)
+- [ ] Treinamento de modelos preditivos (A3)
+- [ ] Relatório técnico e apresentação (A3)
+
+---
+
+## 📚 Materiais de Referência
+
+### **Repositório do Professor**
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" width="20"/> Material base: [SCIA-UNIFACS](https://github.com/nobertomaciel/SCIA-UNIFACS/tree/main/AULA%2002)
+
+### **Bibliografia Recomendada**
+
+**Principais Referências:**
+- LIMA, Isaías. *Inteligência Artificial*. Rio de Janeiro: Grupo GEN, 2014.
+- LUGER, George F. *Inteligência Artificial*. 6. ed. São Paulo: Pearson, 2013.
+- SIMÕES, Marcelo Godoy; SHAW, Ian S. *Controle e Modelagem Fuzzy*. São Paulo: Blucher, 2007.
+- CARVALHO, André C. P. L. F. *Inteligência Artificial: Uma Abordagem de Aprendizado de Máquina*. Rio de Janeiro: LTC, 2011.
 
 ---
 
 ## 🤝 Contribuições
 
-Contribuições são **super bem-vindas**! 🎉
+Contribuições são bem-vindas! Este é um projeto acadêmico em constante evolução.
 
-<div align="center">
+**Como Contribuir:**
 
-### Como Contribuir?
-
-</div>
-
-1. 🍴 Faça um Fork do projeto
-2. 🌿 Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. 💾 Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push para a branch (`git push origin feature/AmazingFeature`)
-5. 🔃 Abra um Pull Request
+1. Fork o projeto
+2. Crie uma branch (`git checkout -b feature/NovaFeature`)
+3. Commit suas alterações (`git commit -m 'Adiciona NovaFeature'`)
+4. Push para a branch (`git push origin feature/NovaFeature`)
+5. Abra um Pull Request
 
 ---
 
@@ -317,9 +386,9 @@ Contribuições são **super bem-vindas**! 🎉
 
 <div align="center">
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Distribuído sob a licença MIT. Consulte `LICENSE` para mais detalhes.
 
 </div>
 
@@ -329,9 +398,16 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 <div align="center">
 
-- 👨‍🏫 **Professor Noberto Maciel** - Pela excelente condução da disciplina e disponibilização do repo do git:https://github.com/nobertomaciel/SCIA-UNIFACS/tree/main/AULA%2002
-- 🎓 **Universidade Salvador** - Pelo suporte acadêmico
-- 📚 **Colegas de turma** - Pelo desenvolvimento em equipe do projeto (A3)
+**Professor Noberto Maciel**  
+Pela excelente condução da disciplina e disponibilização do [repositório de referência](https://github.com/nobertomaciel/SCIA-UNIFACS)
+
+**Universidade Salvador (UNIFACS)**  
+Pelo suporte acadêmico e infraestrutura
+
+**Colegas de Turma**  
+Pelo desenvolvimento colaborativo do projeto A3
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="500">
 
 </div>
 
@@ -339,15 +415,12 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 <div align="center">
 
-### ⭐ Se este repositório foi útil, deixe uma estrela!
+### Se este repositório foi útil, deixe uma ⭐
 
-<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>Adoro conectar com pessoas diferentes!</b> Se quiser trocar uma ideia sobre IA, controle ou programação, <b>sinta-se à vontade para me chamar</b> 😊</em>
-
-
-<sub>💡 **Dica**: Use `Ctrl + F` para encontrar rapidamente o que procura!</sub>
+<sub>💡 **Dica:** Use `Ctrl + F` para buscar rapidamente</sub>
 
 <sub>🔄 Última atualização: Outubro 2025</sub>
 
-**[⬆ Voltar ao topo](#-sistemas-de-controle--inteligência-artificial)**
+**[⬆ Voltar ao topo](#sistemas-de-controle--inteligência-artificial-scia)**
 
 </div>
