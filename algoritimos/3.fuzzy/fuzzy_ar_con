@@ -1,0 +1,366 @@
+# ╔════════════════════════════════════════════════════════════════════════════╗
+# ║     SISTEMA FUZZY PARA CONTROLE DE VENTILADOR DE RESFRIAMENTO              ║
+# ║                  Disciplina: SCIA - UNIFACS 2025.2                         ║
+# ║                                                                            ║
+# ║ Objetivo: Implementar um controlador fuzzy que ajusta a velocidade do      ║
+# ║           ventilador com base na temperatura ambiente.                     ║
+# ║                                                                            ║
+# ║ Pipeline Fuzzy:                                                            ║
+# ║   1. FUZZIFICAÇÃO    → Converter entrada crisp em graus de pertinência     ║
+# ║   2. INFERÊNCIA      → Aplicar regras linguísticas (SE-ENTÃO)              ║
+# ║   3. DEFUZZIFICAÇÃO  → Converter saída fuzzy em valor crisp                ║
+# ╚════════════════════════════════════════════════════════════════════════════╝
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# CLASSE: ConjuntoFuzzy
+
+class ConjuntoFuzzy:
+    def __init__(self, nome, tipo, parametros):
+        self.nome = nome
+        self.tipo = tipo
+        self.parametros = parametros
+
+    def calcular_pertinencia(self, valor):
+        if self.tipo == "triangular":
+            return self._triangular(valor)
+        elif self.tipo == "trapezoidal":
+            return self._trapezoidal(valor)
+        return 0.0
+
+    def _triangular(self, valor):
+        # Calcula pertinência para função triangular.
+        a, b, c = self.parametros
+
+        if valor <= a or valor >= c:
+            return 0.0
+        elif a < valor <= b:
+            return (valor - a) / (b - a)
+        else:
+            return (c - valor) / (c - b)
+
+    def _trapezoidal(self, valor):
+        # Calcula pertinência para função trapezoidal.
+        a, b, c, d = self.parametros
+
+        if valor <= a or valor >= d:
+            return 0.0
+        elif a < valor <= b:
+            return (valor - a) / (b - a)
+        elif b < valor < c:
+            return 1.0
+        else:
+            return (d - valor) / (d - c)
+
+
+# CLASSE: VariavelFuzzy
+
+class VariavelFuzzy:
+    # Gerencia os conjuntos fuzzy de uma variável (entrada ou saída).
+
+    def __init__(self, nome, universo_min, universo_max):
+        # Inicializa uma variável fuzzy.
+        self.nome = nome
+        self.universo_min = universo_min
+        self.universo_max = universo_max
+        self.conjuntos = {}
+
+    def adicionar_conjunto(self, conjunto_fuzzy):
+        # Adiciona um conjunto fuzzy à variável.
+        self.conjuntos[conjunto_fuzzy.nome] = conjunto_fuzzy
+
+    def fuzzificar(self, valor):
+        # Converte um valor crisp em graus de pertinência.
+        resultado = {}
+        for nome_conjunto, conjunto in self.conjuntos.items():
+            pertinencia = conjunto.calcular_pertinencia(valor)
+            if pertinencia > 0:
+                resultado[nome_conjunto] = pertinencia
+
+        return resultado
+
+    def obter_centroide(self, nome_conjunto):
+        # Calcula o centroide de um conjunto.
+        conjunto = self.conjuntos[nome_conjunto]
+
+        if conjunto.tipo == "triangular":
+            a, b, c = conjunto.parametros
+            return (a + b + c) / 3.0
+        elif conjunto.tipo == "trapezoidal":
+            a, b, c, d = conjunto.parametros
+            return (a + b + c + d) / 4.0
+        return 0.0
+
+
+# CLASSE: ControladorFuzzyVentilador
+
+class ControladorFuzzyVentilador:
+    # Sistema fuzzy completo para controle de ventilador com inferência e defuzzificação.
+
+    def __init__(self):
+        # Inicializa o controlador fuzzy.
+        self._criar_variaveis()
+
+    def _criar_variaveis(self):
+        # Cria e configura as variáveis fuzzy de entrada e saída.
+
+        # VARIÁVEL DE ENTRADA: TEMPERATURA
+        self.temperatura = VariavelFuzzy("Temperatura", 0, 40)
+
+        # Conjuntos de temperatura (triangular)
+        self.temperatura.adicionar_conjunto(
+            ConjuntoFuzzy("Baixa", "triangular", [0, 7.5, 15])
+        )
+        self.temperatura.adicionar_conjunto(
+            ConjuntoFuzzy("Média", "triangular", [10, 17.5, 25])
+        )
+        self.temperatura.adicionar_conjunto(
+            ConjuntoFuzzy("Alta", "triangular", [20, 30, 40])
+        )
+
+        # VARIÁVEL DE SAÍDA: VELOCIDADE DO VENTILADOR
+        self.velocidade = VariavelFuzzy("Velocidade", 0, 100)
+
+        # Conjuntos de velocidade (trapezoidal)
+        self.velocidade.adicionar_conjunto(
+            ConjuntoFuzzy("Lenta", "trapezoidal", [0, 0, 20, 40])
+        )
+        self.velocidade.adicionar_conjunto(
+            ConjuntoFuzzy("Média", "trapezoidal", [30, 40, 60, 70])
+        )
+        self.velocidade.adicionar_conjunto(
+            ConjuntoFuzzy("Rápida", "trapezoidal", [60, 80, 100, 100])
+        )
+
+        # REGRAS FUZZY
+        self.regras = [
+            {"entrada": "Baixa", "saida": "Lenta"},
+            {"entrada": "Média", "saida": "Média"},
+            {"entrada": "Alta", "saida": "Rápida"}
+        ]
+
+    def processar(self, valor_temperatura):
+        # Processa um valor de temperatura através do pipeline completo fuzzy.
+
+        # PASSO 1: FUZZIFICAÇÃO
+        graus_entrada = self.temperatura.fuzzificar(valor_temperatura)
+
+        # PASSO 2: INFERÊNCIA (Aplicar regras)
+        ativacoes_saida = {}
+        conjunto_principal = None
+        grau_maximo = 0
+
+        for regra in self.regras:
+            condicao = regra["entrada"]
+            consequente = regra["saida"]
+
+            if condicao in graus_entrada:
+                grau = graus_entrada[condicao]
+
+                if consequente not in ativacoes_saida:
+                    ativacoes_saida[consequente] = 0.0
+
+                ativacoes_saida[consequente] = max(ativacoes_saida[consequente], grau)
+
+                # Rastrear qual conjunto tem maior ativação
+                if grau > grau_maximo:
+                    grau_maximo = grau
+                    conjunto_principal = consequente
+
+        # PASSO 3: DEFUZZIFICAÇÃO (Centro de Massa / Centroide)
+        numerador = 0.0
+        denominador = 0.0
+
+        for nome_conjunto, grau_ativacao in ativacoes_saida.items():
+            centroide = self.velocidade.obter_centroide(nome_conjunto)
+            numerador += grau_ativacao * centroide
+            denominador += grau_ativacao
+
+        velocidade_final = numerador / denominador if denominador > 0 else 0.0
+        velocidade_final = max(0, min(100, velocidade_final))
+
+        return {
+            "temperatura": valor_temperatura,
+            "velocidade": velocidade_final,
+            "classificacao": conjunto_principal,
+            "graus_entrada": graus_entrada,
+            "ativacoes_saida": ativacoes_saida
+        }
+
+
+# FUNÇÃO: Exibir resultado formatado
+
+def exibir_resultado(resultado):
+    # Exibe o resultado do processamento fuzzy de forma formatada.
+    temp = resultado["temperatura"]
+    vel = resultado["velocidade"]
+    classif = resultado["classificacao"]
+    graus = resultado["graus_entrada"]
+    ativacoes = resultado["ativacoes_saida"]
+
+    print("╔" + "═" * 70 + "╗")
+    print("║" + " CONTROLE FUZZY DO VENTILADOR ".center(70) + "║")
+    print("╠" + "═" * 70 + "╣")
+    print(f"║ Temperatura de entrada: {temp:6.1f}°C".ljust(71) + "║")
+    print("╠" + "═" * 70 + "╣")
+    print("║ FUZZIFICAÇÃO (Graus de Pertinência da Entrada):".ljust(71) + "║")
+    for nome, grau in graus.items():
+        print(f"║   • {nome:8s}: {grau:.3f}".ljust(71) + "║")
+    print("╠" + "═" * 70 + "╣")
+    print("║ INFERÊNCIA (Conjuntos de Saída Ativados):".ljust(71) + "║")
+    for nome, grau in ativacoes.items():
+        print(f"║   • {nome:8s}: {grau:.3f}".ljust(71) + "║")
+    print("╠" + "═" * 70 + "╣")
+    print("║ RESULTADO DA DEFUZZIFICAÇÃO:".ljust(71) + "║")
+    print(f"║ Velocidade: {vel:6.2f}% - Classificação: {classif}".ljust(71) + "║")
+    print("╚" + "═" * 70 + "╝")
+    print()
+
+
+# FUNÇÃO: Visualizar funções de pertinência
+def visualizar_funcoes(controlador):
+    # Visualiza as funções de pertinência de entrada e saída.
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
+
+    # Gráfico 1: Temperatura
+    x_temp = np.linspace(0, 40, 500)
+
+    for nome, conjunto in controlador.temperatura.conjuntos.items():
+        y = [conjunto.calcular_pertinencia(t) for t in x_temp]
+        cor = {'Baixa': 'blue', 'Média': 'green', 'Alta': 'red'}[nome]
+        ax1.plot(x_temp, y, label=nome, color=cor, linewidth=2.5)
+        ax1.fill_between(x_temp, y, alpha=0.2, color=cor)
+
+    ax1.set_xlabel('Temperatura (°C)', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Grau de Pertinência μ(x)', fontsize=12, fontweight='bold')
+    ax1.set_title('Variável de Entrada: Temperatura', fontsize=13, fontweight='bold')
+    ax1.legend(loc='upper right', fontsize=11)
+    ax1.grid(True, alpha=0.3, linestyle='--')
+    ax1.set_ylim([-0.05, 1.15])
+
+    # Gráfico 2: Velocidade
+    x_vel = np.linspace(0, 100, 500)
+
+    for nome, conjunto in controlador.velocidade.conjuntos.items():
+        y = [conjunto.calcular_pertinencia(v) for v in x_vel]
+        cor = {'Lenta': 'blue', 'Média': 'green', 'Rápida': 'red'}[nome]
+        ax2.plot(x_vel, y, label=nome, color=cor, linewidth=2.5)
+        ax2.fill_between(x_vel, y, alpha=0.2, color=cor)
+
+    ax2.set_xlabel('Velocidade do Ventilador (%)', fontsize=12, fontweight='bold')
+    ax2.set_ylabel('Grau de Pertinência μ(x)', fontsize=12, fontweight='bold')
+    ax2.set_title('Variável de Saída: Velocidade', fontsize=13, fontweight='bold')
+    ax2.legend(loc='upper right', fontsize=11)
+    ax2.grid(True, alpha=0.3, linestyle='--')
+    ax2.set_ylim([-0.05, 1.15])
+
+    plt.tight_layout()
+    plt.show()
+
+
+# FUNÇÃO: Visualizar superfície de controle
+def visualizar_superficies(controlador, temperaturas):
+    # Visualiza a relação entrada-saída e cria tabela de resultados.
+    velocidades = []
+
+    for temp in temperaturas:
+        resultado = controlador.processar(temp)
+        velocidades.append(resultado["velocidade"])
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
+
+    # Gráfico: Superfície de controle
+    ax1.plot(temperaturas, velocidades, 'b-o', linewidth=2.5, markersize=8)
+    ax1.fill_between(temperaturas, velocidades, alpha=0.3, color='blue')
+
+    # Regiões
+    ax1.axvspan(0, 15, alpha=0.1, color='blue', label='Baixa')
+    ax1.axvspan(10, 25, alpha=0.1, color='green', label='Média')
+    ax1.axvspan(20, 40, alpha=0.1, color='red', label='Alta')
+
+    ax1.set_xlabel('Temperatura (°C)', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Velocidade do Ventilador (%)', fontsize=12, fontweight='bold')
+    ax1.set_title('Superfície de Controle Fuzzy', fontsize=13, fontweight='bold')
+    ax1.legend(loc='upper left', fontsize=11)
+    ax1.grid(True, alpha=0.3, linestyle='--')
+    ax1.set_ylim([0, 105])
+
+    # Tabela: Resultados
+    ax2.axis('off')
+
+    dados_tabela = [["Temperatura (°C)", "Velocidade (%)", "Classificação"]]
+    for temp, vel in zip(temperaturas, velocidades):
+        resultado = controlador.processar(temp)
+        classif = resultado["classificacao"]
+        dados_tabela.append([f"{temp:.1f}", f"{vel:.2f}", classif])
+
+    tabela = ax2.table(
+        cellText=dados_tabela,
+        cellLoc='center',
+        loc='center',
+        colWidths=[0.3, 0.35, 0.35]
+    )
+    tabela.auto_set_font_size(False)
+    tabela.set_fontsize(10)
+    tabela.scale(1, 2)
+
+    # Colorir header
+    for i in range(3):
+        tabela[(0, i)].set_facecolor('#4CAF50')
+        tabela[(0, i)].set_text_props(weight='bold', color='white')
+
+    # Colorir linhas alternadas
+    for i in range(1, len(dados_tabela)):
+        for j in range(3):
+            cor = '#f0f0f0' if i % 2 == 0 else 'white'
+            tabela[(i, j)].set_facecolor(cor)
+
+    plt.tight_layout()
+    plt.show()
+
+
+# FUNÇÃO: Main - Execução principal
+def main():
+    # Executa o sistema completo.
+
+    print("\n")
+    print("╔" + "═" * 70 + "╗")
+    print("║" + " SISTEMA FUZZY - CONTROLE DE VENTILADOR ".center(70) + "║")
+    print("║" + " SCIA - UNIFACS 2025.2 ".center(70) + "║")
+    print("╚" + "═" * 70 + "╝")
+    print()
+
+    # Criar controlador
+    print("🔧 Inicializando sistema fuzzy...")
+    controlador = ControladorFuzzyVentilador()
+    print("✅ Sistema criado com sucesso!\n")
+
+    # Visualizar funções
+    print("📊 Exibindo funções de pertinência...")
+    visualizar_funcoes(controlador)
+
+    # Temperaturas para testar
+    temperaturas_teste = [5, 12, 18, 22, 28, 35, 40]
+
+    # Testar sistema
+    print("\n" + "=" * 72)
+    print("TESTE DO SISTEMA COM DIFERENTES TEMPERATURAS")
+    print("=" * 72 + "\n")
+
+    for temp in temperaturas_teste:
+        resultado = controlador.processar(temp)
+        exibir_resultado(resultado)
+
+    # Visualizar superfícies
+    print("📈 Gerando gráficos de superfície de controle...")
+    visualizar_superficies(controlador, temperaturas_teste)
+
+    print("\n" + "═" * 72)
+    print("✨ Teste concluído com sucesso!")
+    print("═" * 72 + "\n")
+
+
+# PONTO DE ENTRADA
+if __name__ == "__main__":
+    main()
