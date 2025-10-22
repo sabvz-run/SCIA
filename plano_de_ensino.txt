@@ -1,0 +1,42 @@
+PLANO DE ENSINO
+Ementa
+Fundamentos da Inteligência Artificial. Sistemas de Controle e Inteligência Artificial. Fundamentos da teoria dos grafos. Métodos de busca para resolução de problemas. Busca cega e heurística. Fundamentos de análise e complexidade de algoritmos. Representação do conhecimento. Representação da incerteza. Aprendizagem de máquina. Conceitos de aprendizado de máquina. Aprendizado supervisionado, não-supervisionado e por reforço. Aprendizado baseado em árvores de decisão. Sistemas especialistas. Aprendizado baseado em redes neurais. Aprendizado baseado em classificadores probabilísticos. Aprendizado baseado em máquina de vetores de suporte. Aprendizado baseado em combinação de classificadores. Fundamentos de Lógica Fuzzy. Funções de Pertinência. Regras de Inferência e Defuzzificação. Teoria de Controlador baseado em Lógica Fuzzy.
+
+Tópicos Geradores
+Inteligência artificial em sistemas de controle; Grafos e métodos de busca; Análise de complexidade de algoritmos de busca; Algoritmos de aprendizado e técnicas de implementação em inteligência artificial; Classes de aprendizado de máquina: supervisionado, nãosupervisionado, por reforço; Ferramentas e linguagens de programação aplicados a Inteligência artificial; Técnicas avançadas de inteligência artificial: máquina de vetores de suporte, classificadores e lógica Fuzzy; Controladores baseado em técnicas de inteligência artificial;
+
+Metas de Compreensão
+Avaliar a técnica de busca adequada para a solução de um problema de inteligência artificial; Aplicar os conceitos de grafos em uma representação computacional; Relacionar os conceitos de controle de sistema e inteligência artificial; Implementar soluções de software aplicados à inteligência artificial; Estruturar a representação de conhecimento, incerteza e aprendizado; Desenvolver soluções com o uso de técnicas avançadas: máquina de vetores de suporte, classificadores e lógica Fuzzy; Empregar técnicas de Inteligência artificial para a solução de problemas de controle; Avaliar linguagens e ferramentas adequadas para implementação de inteligência Artificial;
+
+Desempenho de Compreensão
+s desempenhos de compreensão são constituídos por experiências, estudos, pesquisas e práticas desenvolvidos no decorrer do semestre letivo que possibilitam ao aluno expressar, de diferentes formas, evidências de que atingiu a compreensão Tais desempenhos demonstram com clareza que os alunos dominam as metas de compreensão, por meio de sua atuação em projetos desafiadores e acessíveis que promovem o seu envolvimento reflexivo sobre a situação a ele exposta Nesta Unidade Curricular, os alunos demonstrarão a sua compreensão por meio do(s) seguinte(s) desempenho(s): (descrição dos professores da UC do desempenho ou desempenhos definidos no planejamento)
+
+Avaliação Continuada
+A avaliação contínua está diretamente ligada à realização do trabalho pedagógico e se concretiza no acompanhamento do processo de ensino e aprendizagem por várias formas. Constitui-se de momentos e instrumentos imprescindíveis utilizados pelo professor para que as metas de compreensão sejam atingidas. Define-se três avaliações principais, que marcam o processo avaliativo na medida em que o aluno percorre seu processo formativo, a saber: A1 - avaliação discursiva em que o aluno demonstrará competências por meio de expressão de linguagem, códigos e signos da área, valendo 30 pontos. A2 - avaliação composta por questões objetivas que visam permitir fazer análises e estabelecer relações evidenciando as competências de leitura e interpretação, valendo 30 pontos. A3 - avaliação que acompanhe o processo de ensino-aprendizagem ao longo do semestre e resulte no desenvolvimento de um projeto ou produto, estudo técnico, croqui, solução digital, arte ou outro formato equivalente e condizente com a Unidade Curricular que permita tangibilizar um desempenho de compreensão, valendo 40 pontos. A nota final será composta pela soma das notas da A1, A2 e A3 (A1+A2+A3). Nas unidades curriculares presenciais, estará aprovado o aluno que obtiver, na soma das três avaliações (A1+A2+A3), a nota mínima de 70 pontos e atingir, no mínimo, 75% de frequência nas aulas presenciais. Nas unidades curriculares digitais (UCD), estará aprovado o aluno que obtiver, na soma das três avaliações (A1+A2+A3), a nota mínima de 70 pontos. O aluno que tenha obtido nota final inferior a 70 pontos, possuem no mínimo 40 (quarenta) pontos em uma das seguintes somas: A1+A3 ou A2+A3 e tiver, no mínimo 75% de presença nas aulas da unidade curricular presencial, poderá realizar avaliação integrada (AI) conforme calendário acadêmico. A nota será atribuída numa escala de 0 (zero) a 30 (trinta) pontos e substituirá, entre A1 e A2, a menor nota. Se a nota da AI for inferior à nota da A1 e, também, da A2, não haverá substituição e o aluno estará reprovado na Unidade Curricular. Após o lançamento da nota da avaliação integrada (AI), o aluno que obtiver 70 pontos, como resultado da soma das avaliações (A1, A2 e A3), será considerado aprovado. O aluno reprovado na unidade curricular deverá refazê-la, na modalidade presencial ou digital, respeitada a oferta. A reprovação em componente curricular não interrompe a progressão do aluno no curso.
+
+Certificação
+Analista de sistemas de controle e inteligência artificial
+
+Competências
+Formular e conceber técnica de controle com o uso de Inteligência Artificial;
+
+Implementar sistemas com o uso de técnicas de inteligência artificial; 
+
+Analisar, aplicar e implementar sistemas de inteligência artificial na solução de problemas; 
+
+Conceber, projetar, analisar e desenvolver softwares aplicados aos sistemas controle.
+
+Bibliografia Básica
+LIMA, Isaías. Inteligência artificial. Rio de Janeiro: Grupo GEN, 2014. E-book. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788595152724/.
+ DORF, Richard C. Sistemas de controle modernos. 13. ed. Rio de Janeiro: LTC, 2018. E-book. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521635147/cfi/6/10!/4/30@0:27.4
+ LUGER, George F. Inteligência artificial. 6. ed. São Paulo: Pearson, 2013. E-book. Disponível em: https://plataforma.bvirtual.com.br/Acervo/Publicacao/180430
+
+Bibliografia Complementar
+CARVALHO, André C. P. L. F. de et al. Inteligência artificial: uma abordagem de aprendizado de máquina. Rio de Janeiro: LTC, 2011. E-book. Disponível em: https://integrada.minhabiblioteca.com.br/books/978-85-216-2146-1
+ LOPES, Isaia Lima; SANTOS, Flávia Aparecida Oliveira; PINHEIROS, Carlos Alberto Murari. Inteligência artificial. Rio de Janeiro: Elsevier, 2014.E-book. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788595152724/cfi/6/10!/4/2/14/2@0:40.9
+ MEDEIROS, Luciano Frontino de. Inteligência artificial aplicada: uma abordagem introdutória. Curitiba: Intersaberes. 2018. E-book. Disponível em: https://plataforma.bvirtual.com.br/Acervo/Publicacao/161682
+ PENEDO, Sergio Ricardo. Master Sistemas de controle: matemática aplicada a projetos. São Paulo: Érica, 2014. E-book. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788536520308/cfi/2!/4/4@0.00:0.00
+ SIMÕES, Marcelo Godoy; SHAW, Ian S. Controle e modelagem fuzzy. São Paulo: Blucher, 2007. E-book. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521215479/cfi/4!/4/4@0.00:52.7
+
+Conteúdo Programático
+Fundamentos da Inteligência Artificial. Sistemas de Controle e Inteligência Artificial. Fundamentos da teoria dos grafos. Métodos de busca para resolução de problemas. Busca cega e heurística. Fundamentos de análise e complexidade de algoritmos. Representação do conhecimento. Representação da incerteza. Aprendizagem de máquina. Conceitos de aprendizado de máquina. Aprendizado supervisionado, não-supervisionado e por reforço. Aprendizado baseado em árvores de decisão. Sistemas especialistas. Aprendizado baseado em redes neurais. Aprendizado baseado em classificadores probabilísticos. Aprendizado baseado em máquina de vetores de suporte. Aprendizado baseado em combinação de classificadores. Fundamentos de Lógica Fuzzy. Funções de Pertinência. Regras de Inferência e Defuzzificação. Teoria de Controlador baseado em Lógica Fuzzy.

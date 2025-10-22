@@ -1,0 +1,45 @@
+EMENTA DE MODELAGEM DE SOFTWARE
+
+Ementa
+Introdução ao processo de desenvolvimento software Fundamentos de requisitos Tipos de requisitos (funcionais e nãofuncionais) Modelagem e notação UML (Unified Modeling Language): diagramas estruturais e comportamentais (diagramas de casos de uso, de atividades e de classes) Noções básicas dos demais diagramas UML Análise e projeto de banco de dados: relacional e nãorelacional Modelo entidaderelacionamento Modelo relacional e normalização Modelo lógico e físico de banco de dados Sistemas Gerenciadores de Banco de Dados (SGBDs) Implementação de transações de banco de dados (CRUD) Linguagem SQL
+
+Tópicos Geradores
+Como se inicia um processo de modelagem e desenvolvimento de software?; Como identificar requisitos de negócio no processo de planejamento do software através da análise de um problema real? Quais ferramentas podem ser utilizadas para criar modelos de softwares?; Como e quando diagramas devem ser utilizados?; Modelagem orientada a objetos; Modelagem e armazenamento de dados através de modelos conceituais, lógicos e físicos; Como funciona um Sistema Gerenciador de Banco de Dados (SGBDs)?; Como os dados podem ser armazenados, manipulados e recuperados em uma estrutura de banco de dados?; Qual a importância na escolha de um modelo de banco de dados para a modelagem de um software?;
+
+Metas de Compreensão
+Analisar problemas avaliando as necessidades dos clientes e usuários; Criar modelos de sistemas de software utilizando o paradigma orientado a objetos a partir dos principais diagramas da UML com ênfase nos mais utilizados: casos de uso, classes e atividades, apresentando uma visão geral dos demais; Criar modelos conceituais, lógicos e físicos de banco de dados de acordo com os propósitos das necessidades do sistema de informação, especificando estruturas e mecanismos de armazenamento, busca e recuperação de dados; Especificar modelos conceituais de banco de dados, analisando aspectos do mundo real a serem tratados pelos sistemas de informação e representandoos corretamente de acordo com o metamodelo selecionado e integrandoos com as diretrizes de administração de dados de uma organização; Criar instruções de manipulação (CRUD) para armazenamento e recuperação de dados utilizando conexões com SGDBs e linguagem de consulta estruturada; Compreender o funcionamento de Sistema Gerenciador de Banco de Dados (SGBDs); Meta máxima: Realizar a modelagem do software e do armazenamento de dados de forma a atender às necessidades dos clientes e usuários;
+
+Desempenho de Compreensão
+Os desempenhos de compreensão são constituídos por experiências, estudos, pesquisas e práticas desenvolvidos no decorrer do semestre letivo que possibilitam ao aluno expressar, de diferentes formas, evidências de que atingiu a compreensão Tais desempenhos demonstram com clareza que os alunos dominam as metas de compreensão, por meio de sua atuação em projetos desafiadores e acessíveis que promovem o seu envolvimento reflexivo sobre a situação a ele exposta Nesta Unidade Curricular, os alunos demonstrarão a sua compreensão por meio do(s) seguinte(s) desempenho(s): Analisar uma situação problema e expressar seus elementos através da linguagem UML e propor soluções de Bancos de Dados
+
+Avaliação Continuada
+A avaliação contínua está diretamente ligada à realização do trabalho pedagógico e se concretiza no acompanhamento do processo de ensino e aprendizagem por várias formas. Constitui-se de momentos e instrumentos imprescindíveis utilizados pelo professor para que as metas de compreensão sejam atingidas. Define-se três avaliações principais, que marcam o processo avaliativo na medida em que o aluno percorre seu processo formativo, a saber: A1 - avaliação discursiva em que o aluno demonstrará competências por meio de expressão de linguagem, códigos e signos da área, valendo 30 pontos. A2 - avaliação composta por questões objetivas que visam permitir fazer análises e estabelecer relações evidenciando as competências de leitura e interpretação, valendo 30 pontos. A3 - avaliação que acompanhe o processo de ensino-aprendizagem ao longo do semestre e resulte no desenvolvimento de um projeto ou produto, estudo técnico, croqui, solução digital, arte ou outro formato equivalente e condizente com a Unidade Curricular que permita tangibilizar um desempenho de compreensão, valendo 40 pontos. A nota final será composta pela soma das notas da A1, A2 e A3 (A1+A2+A3). Nas unidades curriculares presenciais, estará aprovado o aluno que obtiver, na soma das três avaliações (A1+A2+A3), a nota mínima de 70 pontos e atingir, no mínimo, 75% de frequência nas aulas presenciais. Nas unidades curriculares digitais (UCD), estará aprovado o aluno que obtiver, na soma das três avaliações (A1+A2+A3), a nota mínima de 70 pontos. O aluno que tenha obtido nota final inferior a 70 pontos, possuem no mínimo 40 (quarenta) pontos em uma das seguintes somas: A1+A3 ou A2+A3 e tiver, no mínimo 75% de presença nas aulas da unidade curricular presencial, poderá realizar avaliação integrada (AI) conforme calendário acadêmico. A nota será atribuída numa escala de 0 (zero) a 30 (trinta) pontos e substituirá, entre A1 e A2, a menor nota. Se a nota da AI for inferior à nota da A1 e, também, da A2, não haverá substituição e o aluno estará reprovado na Unidade Curricular. Após o lançamento da nota da avaliação integrada (AI), o aluno que obtiver 70 pontos, como resultado da soma das avaliações (A1, A2 e A3), será considerado aprovado. O aluno reprovado na unidade curricular deverá refazê-la, na modalidade presencial ou digital, respeitada a oferta. A reprovação em componente curricular não interrompe a progressão do aluno no curso.
+
+Certificação
+Qualificação Profissional em Modelagem e Persistência de Dados
+
+Competências
+Compreender noções básicas o processo de desenvolvimento de software; 
+
+
+Identificar e criar especificações de requisitos para problemas do mundo real; 
+
+Interagir com pessoas de diferentes perfis e diversas áreas do conhecimento; 
+
+Interpretar, analisar, avaliar e projetar soluções, por meio de modelos orientados a objetos, utilizando notação UML com enfoque em análise e projeto de software; 
+
+Interpretar, analisar, avaliar e criar modelos de dados utilizando técnicas de modelagem de banco dados relacionais.
+
+Bibliografia Básica
+RANGEL, Pablo. Sistemas orientados a objetos. Rio de Janeiro: Brasport, 2021. E-book. Disponível em: https://plataforma.bvirtual.com.br/Leitor/Publicacao/197367/epub/0.
+PRESSMAN, Roger; MAXIM, Bruce. Engenharia de Software. Uma abordagem profissional. 8a. Ed. Bookman, 2016. E-book. Disponível em:  https://integrada.minhabiblioteca.com.br/#/books/9788580555349/cfi/3!/4/2@100:0.00
+ELMASRI, R.; NAVATHE, S. B. Sistemas de banco de dados. 7. ed. São Paulo, SP: Pearson, 2018. E-book. Disponível em: https://plataforma.bvirtual.com.br/Leitor/Publicacao/168492/pdf/0
+
+Bibliografia Complementar
+LARMAN, Craig. Utilizando UML e padrões: uma introdução à análise e ao projeto orientados a objetos e desenvolvimento iterativo. 3. ed Porto Alegre: Bookman, 2007. https://integrada.minhabiblioteca.com.br/#/books/9788577800476/cfi/0!/4/2@100:0.00
+MACHADO, Felipe Nery R. Banco de dados: projeto e implementação. Rio de Janeiro: Érica, 2020. E-book. Disponível em: https://app.minhabiblioteca.com.br/reader/books/9788536532707/.
+SOMMERVILLE, Ian. Engenharia de Software. 9. ed. São Paulo: Pearson Prentice Hall, 2011. E-book. Disponível em: https://plataforma.bvirtual.com.br/Leitor/Publicacao/168127/pdf/0
+PFLEEGER, Shari Lawrence. Engenharia de software: teoria e prática. 2. ed. São Paulo: Prentice Hall, 2004. E-book. Disponível em: https://plataforma.bvirtual.com.br/Leitor/Publicacao/476/pdf/0
+FOWLER, Martin; SCOTT, Kendall. UML essencial: um breve guia para a linguagem-padrão de modelagem de objetos. 3. ed. Porto Alegre: Bookman, 2004. E-book. Disponível em:  https://integrada.minhabiblioteca.com.br/#/books/9788560031382/cfi/6/2!/4/2@0:0.131.
+
+Introdução ao processo de desenvolvimento software Fundamentos de requisitos Tipos de requisitos (funcionais e nãofuncionais) Modelagem e notação UML (Unified Modeling Language): diagramas estruturais e comportamentais (diagramas de casos de uso, de atividades e de classes) Noções básicas dos demais diagramas UML Análise e projeto de banco de dados: relacional e nãorelacional Modelo entidaderelacionamento Modelo relacional e normalização Modelo lógico e físico de banco de dados Sistemas Gerenciadores de Banco de Dados (SGBDs) Implementação de transações de banco de dados (CRUD) Linguagem SQL
