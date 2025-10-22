@@ -417,8 +417,6 @@ Pelo desenvolvimento colaborativo do projeto A3
 
 ### Se este repositório foi útil, deixe uma ⭐
 
-<sub>💡 **Dica:** Use `Ctrl + F` para buscar rapidamente</sub>
-
 <sub>🔄 Última atualização: Outubro 2025</sub>
 
 **[⬆ Voltar ao topo](#sistemas-de-controle--inteligência-artificial-scia)**
